@@ -62,6 +62,18 @@ public:
     }
 };
 int main(){
-    
+    CheckBook n(1000); //Initialized check book with balance 1000
+    n.writeCheck(100); //invoked writeCheck function for 100
+    cout<< "Balance: " << n.balance<< endl; //Printing the balance after the check cashed out
+    n.writeCheck(200); //invoked writeCheck function for 200
+    cout<< "Balance: " << n.balance << endl; //Printing the balance after the check cashed out
+    n.writeCheck(300); //invoked writeCheck function for 300
+    cout<< "Balance: " << n.balance << endl; //Printing the balance after the check cashed out
+    n.writeCheck(3000); //invoked writeCheck for 3000, but it won't do anything as the balance is less than amount
+    cout<< "Balance: " << n.balance << endl; //Printing the balance
+    n.deposit(1000); //Making a deposit of 1000
+    cout<< "Balance: " << n.balance << endl; //Printing the balance after the deposit
+    n.displayChecks(); //Invoke displayChecks function which display all the checks
+
     return 0;
 }
